@@ -21,7 +21,7 @@ h6 {
 }
 
 .background {
-  background-image: url("/home/asset/ompek.jpg"); /* Ganti dengan path gambar kamu */
+  background-image: url("/asset/ompek.jpg"); /* Ganti dengan path gambar kamu */
   background-size: cover; /* Supaya gambar menutupi seluruh kontainer */
   background-position: center; /* Posisikan gambar di tengah */
   background-repeat: no-repeat;
