@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>website-osis/mpk-skansa</title>
+    <title>website-osis-mpk</title>
   </head>
   <body>
     <header>
@@ -12,7 +12,7 @@
         <img src="/asset/osismpk.PNG" alt="logo" />
         <span>OSIS & MPK <br />SMK 1 BULUKUMBA</span>
       </div>
-   
+
       <div class="menu">
         <a href="index-home.html" class="link">
           <span class="link-icon">
@@ -75,7 +75,7 @@
               ></path>
             </svg>
           </span>
-          <span class="link-title"> Osis</span>
+          <span class="link-title">Osis</span>
         </a>
         <a href="/index-mpk.html" class="link">
           <span class="link-icon">
@@ -190,81 +190,152 @@
         </a>
       </div>
     </header>
-    <div class="background">
-        <div class="opening">
-            <h1>OSIS & MPK <br> SMK 1 BULUKUMBA</h1>
-            <P>Selamat Datang di website osis mpk skansa. website ini berisikan informasi mengenai osis mpk skansa periode 2024-2025.</P>
-        </div>
-    </div>
+    <h1 class="judul judul-utama">ORGANISASI MPK <br />(MAJELIS PERMUSYAWARATAN KELAS)</h1>
     <div class="content">
-        <div class="about">
-          <h1>tentang Organisasi</h1>
+      <div class="tentang">
+        <h2 class="sub-judul">TENTANG MPK</h2>
+        <div class="isi">
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
-            sapiente quibusdam obcaecati adipisci et! Pariatur, eum mollitia
-            delectus laborum expedita laboriosam ipsam soluta assumenda odit
-            nobis perspiciatis magnam? Illum, repellendus.
+            <strong> MPK </strong>adalah singkatan dari Majelis Perwakilan
+            Kelas, yaitu organisasi siswa di tingkat SMP atau SMA yang terdiri
+            dari wakil-wakil dari setiap kelas. MPK berperan sebagai lembaga
+            legislatif di sekolah, yang bertugas mengawasi dan mengevaluasi
+            kinerja OSIS serta menyalurkan aspirasi siswa kepada pihak sekolah.
+            <br />
+
+            <strong> 📌 Tugas Utama MPK</strong> <br />
+            - Mengawasi dan mengevaluasi program kerja OSIS <br />
+            - Menyampaikan aspirasi siswa dari tiap kelas <br />
+            - Menyeleksi dan memilih calon pengurus OSIS <br />
+            - Menyusun dan menetapkan Garis Besar Program Kerja OSIS bersama
+            pembina <br />
+            - Menyelenggarakan rapat pleno dan orasi pemilihan ketua OSIS dan
+            MPK <br />
+            <strong> 👥 Struktur Organisasi MPK </strong><br />
+            <strong> - Ketua MPK</strong>: Memimpin dan mengkoordinasikan
+            seluruh kegiatan MPK <br />
+            <strong> - Wakil Ketua </strong>: Mendampingi ketua dan
+            menggantikannya bila diperlukan <br />
+            <strong> - Sekretaris & Bendahara </strong>: Mengelola administrasi
+            dan keuangan <br> - <strong> Anggota </strong>: Perwakilan dari setiap
+            kelas yang menyampaikan aspirasi siswa
           </p>
+
+          <img src="/asset/mpk.png" alt="logo mpk" id="logo"/>
         </div>
-        <hr>
-        <div class="about">
-          <h1>Sejarah Organisasi</h1>
+      </div>
+      <div class="visi-misi">
+        <h1 class="judul">VISI & MISI</h1>
+        <div class="isi-vm">
+          <h2 class="sub-judul">VISI</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi
-            sapiente quibusdam obcaecati adipisci et! Pariatur, eum mollitia
-            delectus laborum expedita laboriosam ipsam soluta assumenda odit
-            nobis perspiciatis magnam? Illum, repellendus.
+            Meningkatkan Budaya literasi yang kuat dilingkungan sekolah SMK
+            NEGERI 1 BULUKUMBA, Serta Menjadikan osis sebagai media pengumpul
+            semua saran yang menjadi keinginan siswa-siswi dalam Memajukan
+            Kualitas para peserta didik.
+          </p>
+
+          <h2 class="sub-judul">MISI</h2>
+          <p>
+            - Menjunjung Tinggi Ketaqwaan terhadap Tuhan yang maha esa. <br />
+            - Menjalin Hubungan antar siswa dan bapak ibu guru. <br />
+
+            - Menciptakan kepribadian Siswa/i SMK NEGERI 1 BULUKUMBA yang -
+            KHARISMA (Kreatif, Harmonis, Aktif, Religius, Inovatif, Sopan, -
+            Mandiri, dan Adil) melalui kolaborasi Organisasi dan -
+            Ekstrakurikuler yang ada. <br />
+
+            - Mengadakan lomba-lomba dibidang Akademik untuk mngembangkan bakat
+            - siswa/i yang bisa meningkatkan budaya literasi di SMK NEGERI 1 -
+            BULUKUMBA. <br />
+
+            - Menjadikan Osis sebagai sarana sharing informasi berbasis online -
+            melalui media sosial. <br />
           </p>
         </div>
       </div>
     </div>
+    <h1 class="judul">SEKSI BIDANG</h1>
+    <div class="body-card">
+      <button class="scroll-btn left" onclick="scrollLeft()">←</button>
+      <div class="card-wrapper" id="cardWrapper">
+        <div class="card">komisi 1</div>
+        <div class="card">komisi 2</div>
+        <div class="card">komisi 3</div>
+        <div class="card">komisi 4</div>
+      
+      </div>
+
+      <button class="scroll-btn right" onclick="scrollRight()">→</button>
+    </div>
+
     <footer>
-        <div class="footer">
-            <h1>SCHOOL ADDRESS</h1>
-           <p>
-            Alamat : Jl. Teratai No. 24 Caile, Kec. Ujung Bulu, Kab. Bulukumba,
-            Sulsel
-          </p>
-          <p>No. Telpon : (0413) 81168</p>
-          <p>NPSN : 40304253</p>
-          <p>Akreditasi : B</p>
-        </div>
-        <div class="logo-footer logo footer">
-            <img src="/asset/mpk.png" alt="logo mpk">
-            <img src="/asset/smk.png" alt="logo smk">
-            <img src="/asset/osis.png" alt="logo osis">
-        </div>
-        <div class="footer">
-            <h1 >SOSIAL MEDIA</h1>
-           
-           
-          <p>  Instagram |
-              <a
-                href="https://www.instagram.com/osismpkskansa_?utm_source=ig_web_button_share_sheet&igsh=ZnpyYWh0bXNidnZ0"
-              >
-                @osismpkskansa_</a
-              >
-          </p>
-         <p>
-              Instagram |
-              <a
-                href="https://www.instagram.com/skansa_bulukumba?utm_source=ig_web_button_share_sheet&igsh=MWR0bmdvbXZuNXhvdQ=="
-                >@skansa_bulukumba</a
-              >
+      <div class="address">
+        <h1>SCHOOL ADDRESS</h1>
+        <p>
+          Alamat : Jl. Teratai No. 24 Caile, Kec. Ujung Bulu, Kab. Bulukumba,
+          Sulsel
         </p>
-         <p>
-              tik tok |
-              <a
-                href="https://www.tiktok.com/@osismpkskansa_24.25?_t=ZS-8yFz0TDsCee&_r=1"
-              >
-                @osismpkskansa_24.25</a
-              >
-          </p>
-        
-        </div>
-      </footer>
-      <div class="pembuat">
-       <p>&copy; 2025 By Aswatul fikar | All rights reserved</p>
-       </div>
+        <p>No. Telpon : (0413) 81168</p>
+        <p>NPSN : 40304253</p>
+        <p>Akreditasi : B</p>
+      </div>
+      <div class="logo-footer footer">
+        <img src="/asset/mpk.png" alt="logo mpk" />
+        <img src="/asset/smk.png" alt="logo smk" />
+        <img src="/asset/osis.png" alt="logo osis" />
+      </div>
+      <div class="footer">
+        <h1>SOSIAL MEDIA</h1>
+
+        <p>
+          Instagram |
+          <a
+            href="https://www.instagram.com/osismpkskansa_?utm_source=ig_web_button_share_sheet&igsh=ZnpyYWh0bXNidnZ0"
+          >
+            @osismpkskansa_</a
+          >
+        </p>
+        <p>
+          Instagram |
+          <a
+            href="https://www.instagram.com/skansa_bulukumba?utm_source=ig_web_button_share_sheet&igsh=MWR0bmdvbXZuNXhvdQ=="
+            >@skansa_bulukumba</a
+          >
+        </p>
+        <p>
+          tik tok |
+          <a
+            href="https://www.tiktok.com/@osismpkskansa_24.25?_t=ZS-8yFz0TDsCee&_r=1"
+          >
+            @osismpkskansa_24.25</a
+          >
+        </p>
+      </div>
+    </footer>
+    <div class="pembuat">
+      <p>&copy; 2025 By Aswatul fikar | All rights reserved</p>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const wrapper = document.getElementById("cardWrapper");
+        const scrollAmount = 475;
+
+        window.scrollLeft = function () {
+          wrapper.scrollBy({
+            left: 0,
+            behavior: "smooth",
+          });
+        };
+
+        window.scrollRight = function () {
+          wrapper.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth",
+          });
+        };
+      };
+    </script>
   </body>
 </html>

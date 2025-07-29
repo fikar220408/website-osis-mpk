@@ -9,7 +9,11 @@ body {
   background-color: #0c0c0c;
   color: white;
   line-height: 1.6;
-  height: 100%;
+  
+}
+
+p {
+  font-size: 25px;
 }
 
 /* Header dan logo */
@@ -128,44 +132,150 @@ header {
   justify-content: center;
 }
 
-.about{
-    padding: 0 50px;
-    text-align: center;
-   
-    display: flex;
-    flex-direction: column;
+.about {
+  padding: 0 50px;
+  text-align: center;
 
+  display: flex;
+  flex-direction: column;
 }
 
-.about h1{
-    margin-top: 10px;
+.about h1 {
+  margin-top: 10px;
 }
 
-hr{
-    margin:5px 20px ;
+hr {
+  margin: 5px 20px;
 }
 
-footer{
-   gap: 20px; /* jarak antar kolom */
+footer {
+  gap: 20px; /* jarak antar kolom */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
- margin: 30px 20px;
+  margin: 30px 20px;
 }
 
-.logo-footer{
+.logo-footer {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pembuat{
+.logo-footer img{
+  height: 200px;
+
+}
+
+.footer{
   text-align: center;
 }
 
+.pembuat {
+  text-align: center;
+}
+
+p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+.judul {
+  text-align: center;
+  padding-top: 20px;
+}
+.sub-judul {
+  margin: 10px;
+}
+
+.tentang,
+.visi-misi{
+  margin: 10px 30px;
+}
+.isi {
+display: flex;
+flex-direction: row;
+}
+
+.isi img{
+  float: right;
+}
+
+
+/* card */
+.card-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 20px;
+  max-width: 55%;
+}
+
+.card {
+  min-width: 430px;
+  height: 500px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  flex-shrink: 0;
+  box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+  margin: 0 15px;
+}
+
+.card:hover {
+  transform: rotateY(15deg);
+}
+
+.scroll-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  border-radius: 5px;
+  height: 50px;
+}
+
+button {
+  background-color: #007bff; /* Warna dasar biru */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+.body-card {
+  display: flex;
+  gap: 20px;
+  width: 75%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
 /* 📱 Responsive: untuk layar kecil */
-@media (max-width: 768px)
-{
- 
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -175,48 +285,47 @@ footer{
     padding: 30px;
   }
 
-
   .link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 50px;
-  border-radius: 8px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transform-origin: center left;
-  transition: width 0.2s ease-in;
-  text-decoration: none;
-  color: inherit;
-  &:before {
-    position: absolute;
-    z-index: -1;
-    content: "";
-    display: block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 50px;
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: translateX(100%);
-    transition: transform 0.2s ease-in;
-    transform-origin: center right;
-    background-color: #000000;
-  }
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform-origin: center left;
+    transition: width 0.2s ease-in;
+    text-decoration: none;
+    color: inherit;
+    &:before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      display: block;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      transform: translateX(100%);
+      transition: transform 0.2s ease-in;
+      transform-origin: center right;
+      background-color: #000000;
+    }
 
-  &:hover,
-  &:focus {
-    outline: 0;
-    width: 130px;
+    &:hover,
+    &:focus {
+      outline: 0;
+      width: 130px;
 
-    &:before,
-    .link-title {
-      transform: translateX(0);
-      opacity: 1;
+      &:before,
+      .link-title {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
-}
 
   .background {
     background-size: cover;
@@ -255,16 +364,16 @@ footer{
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
+    width: 75%;
     justify-content: center;
     position: relative;
     z-index: 3;
     color: white;
-    padding: 30px;
+    padding: 15px;
   }
 
-  .content{
-position: relative;
+  .content {
+    position: relative;
     z-index: 3;
     color: white;
   }
@@ -275,11 +384,62 @@ position: relative;
     font-size: 16px;
   }
 
-  footer{
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+
   }
 
- 
+.logo-footer img{
+  height: 100px;
+
 }
+
+footer .address{
+  text-align: center;
+}
+
+  .tentang {
+ 
+  }
+.tentang .isi{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.isi img{
+  width:50% ;
+}
+
+
+
+.body-card {
+
+}
+.card-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 20px;
+  max-width: 75%;
+}
+
+.card {
+  min-width: 150px;
+  height: 200px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  flex-shrink: 0;
+  box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+  margin: 0 15px;
+}
+
+}
+
 
