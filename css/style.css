@@ -112,7 +112,7 @@ header {
 }
 
 .background {
-  background-image: url(/asset/ompek.jpg);
+  background-image: url(asset/ompek.jpg);
   background-size: cover; /* Supaya gambar menutupi seluruh kontainer */
   background-position: center; /* Posisikan gambar di tengah */
   background-repeat: no-repeat;
