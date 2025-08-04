@@ -4,12 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0c0c0c;
   color: white;
-  line-height: 1.6;
-  
+  height: auto;
 }
 
 p {
@@ -27,7 +38,6 @@ header {
 }
 .logo img {
   height: 50px;
-  border-radius: 50%;
 }
 
 .logo {
@@ -41,7 +51,7 @@ header {
   background-color: #000000;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   border-radius: 15px;
   box-shadow: 0 10px 25px 0 rgba(#000, 0.075);
 }
@@ -119,21 +129,25 @@ header {
   height: 750px;
   margin-top: 5px;
   padding: 10px;
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .opening {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 50px;
+  font-weight: 600;
   width: 70%;
-  justify-content: center;
+}
+
+.opening p {
+  font-style: italic;
 }
 
 .about {
-  padding: 0 50px;
+  margin: 50px 50px;
   text-align: center;
 
   display: flex;
@@ -141,7 +155,7 @@ header {
 }
 
 .about h1 {
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
 hr {
@@ -161,12 +175,11 @@ footer {
   justify-content: center;
 }
 
-.logo-footer img{
+.logo-footer img {
   height: 200px;
-
 }
 
-.footer{
+.footer {
   text-align: center;
 }
 
@@ -179,6 +192,10 @@ p a {
   color: #fff;
 }
 
+.judul-utama {
+  margin: 50px 0;
+  text-align: center;
+}
 
 .judul {
   text-align: center;
@@ -189,18 +206,14 @@ p a {
 }
 
 .tentang,
-.visi-misi{
+.visi-misi {
   margin: 10px 30px;
 }
 .isi {
-display: flex;
-
+  display: grid;
+  grid-template-columns: 2.5fr 0.5fr;
+  grid-template-rows: 1fr;
 }
-
-.isi img{
-  float: right;
-}
-
 
 /* card */
 .card-wrapper {
@@ -213,10 +226,9 @@ display: flex;
 }
 
 .card {
- 
   min-width: 430px;
   height: 500px;
-  background: rgba(0, 111, 201, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,21 +287,87 @@ button:hover {
   justify-content: center;
 }
 
-.card img{
+.card img {
   width: 100%;
   height: 100%;
- 
+  border-radius: 15px;
+}
+
+.card .sekbid {
+  width: 100%;
+  height: 100%;
+}
+
+.pembina {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pembina,
+.members-mpk,
+.waketos-ketos,
+.members-osis {
+  margin-bottom: 50px;
+}
+
+.members-mpk,
+.waketos-ketos,
+.members-osis {
+  justify-content: center;
+  display: flex;
+  gap: 40px;
+}
+
+h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  height: auto;
+}
+
+.card-pengurus img {
+  height: 100%;
+  width: 100%;
+}
+
+.pengurus {
+  background-color: #fff;
+  width: 400px;
+  height: 100%;
+
+
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 /* 📱 Responsive: untuk layar kecil */
 @media (max-width: 768px) {
+  *,
+  ::after,
+  ::before {
+    box-sizing: border-box;
+  }
+  body {
+    overflow-x: hidden;
+    margin-bottom: 10px;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
     z-index: 3;
     color: white;
-    padding: 30px;
+    padding: 1px;
+  }
+
+  header .logo {
+    padding-left: 18px;
+    padding-top: 10px;
   }
 
   .link {
@@ -340,43 +418,31 @@ button:hover {
     margin: 0;
     align-items: center;
     max-width: 100%;
-    color: #ffffff;
     display: flex;
     height: auto;
-  }
-  /* Efek blur atau gelap */
-  .background::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* transparansi gelap */
-    backdrop-filter: blur(3px); /* efek blur */
-    z-index: 1;
-  }
-
-  /* Gradien bagian bawah */
-  .background::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: linear-gradient(to top, black, transparent);
-    z-index: 2;
   }
 
   .opening {
     display: flex;
-    align-items: flex-start;
+
     flex-direction: column;
     justify-content: center;
-    width: 75%;
+    width: 100%;
     justify-content: center;
     position: relative;
     z-index: 3;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 15px;
+  }
+
+  .opening h1 {
+    text-align: center;
+    font-size: 25px;
+    flex-wrap: wrap;
+  }
+
+  .opening p {
+    font-size: 12px;
   }
 
   .content {
@@ -394,55 +460,85 @@ button:hover {
   footer {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+  }
+
+  .logo-footer img {
+    height: 100px;
+  }
+
+  footer .address {
+    text-align: center;
+  }
+
+  .tentang .isi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .isi img {
+    width: 50%;
+  }
+
+  .card {
+    min-width: 150px;
+    height: 200px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+    margin: 0 5px;
+  }
+  /* struktur */
+  .pengurus {
+    width: 200px;
+    height: 100%;
+    justify-items: center;
 
   }
 
-.logo-footer img{
-  height: 100px;
+  h4 {
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+  }
 
+  .members-mpk,
+  .members-osis,
+  .waketos-ketos {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .judul-utama {
+    margin: 15px 0;
+  }
+
+  .scroll-btn {
+    padding: 0 5px;
+    height: 30px;
+  }
+  .card-wrapper {
+    gap: 8px;
+    max-width: 80%;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
 }
 
-footer .address{
-  text-align: center;
+@media (max-width: 378px) {
+  .footer {
+    text-align: center;
+  }
+  .logo-footer img {
+    height: 100px;
+    width: auto;
+  }
 }
-
-
-.tentang .isi{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-.isi img{
-  width:50% ;
-}
-
-.card-wrapper {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 10px;
-  padding: 20px;
-  max-width: 75%;
-}
-.card:hover {
-  transform: rotateY(15deg);
-}
-
-.card {
-  min-width: 150px;
-  height: 200px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  flex-shrink: 0;
-  box-shadow: 10px 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.5s ease;
-  margin: 0 5px;
-}
-
-}
-
-
